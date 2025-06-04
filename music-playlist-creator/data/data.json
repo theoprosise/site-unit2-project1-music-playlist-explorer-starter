@@ -1,0 +1,92 @@
+{
+  "playlists": [
+    {
+      "playlistID": "1",
+      "playlist_name": "Chill",
+      "playlist_author": "PhilChill",
+      "playlist_art": "assets/img/playlist.png",
+      "like_count": 100,
+      "songs": [
+        { "title": "Ocean Eyes", "artist": "Bill E", "album": "Smile", "duration": "3:00" },
+        { "title": "Midnight Sky", "artist": "Lana Breeze", "album": "Calm Nights", "duration": "2:55" }
+      ]
+    },
+    {
+      "playlistID": "2",
+      "playlist_name": "Workout Beats",
+      "playlist_author": "FlexMax",
+      "playlist_art": "assets/img/playlist.png",
+      "like_count": 250,
+      "songs": [
+        { "title": "Pump It Up", "artist": "DJ Strong", "album": "Max Energy", "duration": "3:45" },
+        { "title": "No Excuses", "artist": "BeatzMode", "album": "Hard Mode", "duration": "3:15" }
+      ]
+    },
+    {
+      "playlistID": "3",
+      "playlist_name": "Late Night Drive",
+      "playlist_author": "Nocturnal Vibes",
+      "playlist_art": "assets/img/playlist.png",
+      "like_count": 180,
+      "songs": [
+        { "title": "Neon Roads", "artist": "Cruze", "album": "Nightcall", "duration": "4:00" },
+        { "title": "Highway Dreams", "artist": "MoonRide", "album": "City Flow", "duration": "3:30" }
+      ]
+    },
+    {
+      "playlistID": "4",
+      "playlist_name": "Coffee & Study",
+      "playlist_author": "LoFi Guru",
+      "playlist_art": "assets/img/playlist.png",
+      "like_count": 320,
+      "songs": [
+        { "title": "Notebook Vibes", "artist": "LofiBot", "album": "Study Flow", "duration": "2:45" },
+        { "title": "Bean Break", "artist": "CafeChill", "album": "Brew Beats", "duration": "3:10" }
+      ]
+    },
+    {
+      "playlistID": "5",
+      "playlist_name": "Throwback Hits",
+      "playlist_author": "RetroRick",
+      "playlist_art": "assets/img/playlist.png",
+      "like_count": 410,
+      "songs": [
+        { "title": "Disco Time", "artist": "The Glitters", "album": "Retro Love", "duration": "3:20" },
+        { "title": "Back Again", "artist": "SynthPop", "album": "Golden Days", "duration": "3:55" }
+      ]
+    },
+    {
+      "playlistID": "6",
+      "playlist_name": "Indie Fresh",
+      "playlist_author": "AltExplorer",
+      "playlist_art": "assets/img/playlist.png",
+      "like_count": 290,
+      "songs": [
+        { "title": "Wanderlust", "artist": "River Roads", "album": "Untamed", "duration": "3:35" },
+        { "title": "Sunset Radio", "artist": "Indigo Souls", "album": "First Light", "duration": "3:05" }
+      ]
+    },
+    {
+      "playlistID": "7",
+      "playlist_name": "Hip-Hop Wave",
+      "playlist_author": "MicDrop",
+      "playlist_art": "assets/img/playlist.png",
+      "like_count": 375,
+      "songs": [
+        { "title": "Next Move", "artist": "Flowmatic", "album": "Bars & Beats", "duration": "2:50" },
+        { "title": "Step Up", "artist": "K-Boom", "album": "Grind Time", "duration": "3:40" }
+      ]
+    },
+    {
+      "playlistID": "8",
+      "playlist_name": "Acoustic Mornings",
+      "playlist_author": "CalmStrings",
+      "playlist_art": "assets/img/playlist.png",
+      "like_count": 200,
+      "songs": [
+        { "title": "Waking Light", "artist": "Ava Rae", "album": "Soft Start", "duration": "3:25" },
+        { "title": "Home Song", "artist": "Strumline", "album": "Porch Views", "duration": "2:58" }
+      ]
+    }
+  ]
+}
