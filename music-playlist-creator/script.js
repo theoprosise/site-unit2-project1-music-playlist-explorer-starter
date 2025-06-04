@@ -12,7 +12,10 @@ fetch("data/data.json")
         card.className = "playlist";
         card.innerHTML = `
         <img src="${playlist.playlist_art}" alt="Playlist Art">
-        <h3>${playlist.playlist_name}</h3>`;
+        <h3>${playlist.playlist_name}</h3>
+        <p>${playlist.playlist_author}</p>
+        <p>${playlist.like_count} Likes</p>
+        `;
 
         card.addEventListener("click",() => openModal(playlist));
         cardContainer.appendChild(card);
@@ -29,22 +32,23 @@ const modal = document.getElementById("playlistModal");
 const span = document.getElementsByClassName("close")[0];
 
 span.onclick = function() {
-   modal.style.display = "none";
+    modal.style.display = "none";
 }
 window.onclick = function(event) {
-   if (event.target == modal) {
-      modal.style.display = "none";
-   }
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
 }
 
 function openModal(playlist) {
-   document.getElementById('modalTitle').innerText = playlist.playlist_name;
-   document.getElementById('modalCreator').innerText = `By ${playlist.playlist_author}`;
+    document.getElementById('modalTitle').innerText = playlist.playlist_name;
+    document.getElementById('modalCreator').innerText = `By ${playlist.playlist_author}`;
+    document.getElementById('modalImage').innerHTML = `<img src="${playlist.playlist_art}" alt="Playlist Art">`;
 
-   const songsContainer = document.getElementById("modalSongs");
-   songsContainer.innerHTML = "";
+    const songsContainer = document.getElementById("modalSongs");
+    songsContainer.innerHTML = "";
 
-   if(Array.isArray(playlist.songs) && playlist.songs.length > 0){
+    if(Array.isArray(playlist.songs) && playlist.songs.length > 0){
     const ul = document.createElement("ul");
     ul.style.listStyleType = "disc";
     ul.style.paddingLeft = "1.2rem";
@@ -55,9 +59,9 @@ function openModal(playlist) {
         ul.appendChild(li);
     });
     songsContainer.appendChild(ul);
-   } else{
+    } else{
     songsContainer.innerText = "No songs found";
-   }
-   modal.style.display = "block";
+    }
+    modal.style.display = "block";
 }
 
