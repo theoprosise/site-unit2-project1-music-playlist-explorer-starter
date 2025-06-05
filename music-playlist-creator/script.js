@@ -10,12 +10,40 @@ fetch("data/data.json")
     data.playlists.forEach(playlist => {
         const card = document.createElement("article");
         card.className = "playlist";
+        let liked = false;
+        let likeCount = playlist.like_count;
         card.innerHTML = `
         <img src="${playlist.playlist_art}" alt="Playlist Art">
         <h3>${playlist.playlist_name}</h3>
         <p>${playlist.playlist_author}</p>
-        <p>${playlist.like_count} Likes</p>
+        <div class="like-container">
+        <button class ="like-btn">
+        <i class="fa-regular fa-heart"></i>
+        </button>
+        <span class="like-count">${likeCount}</span>
+        </div>
         `;
+
+        const likeBtn = card.querySelector(".like-btn i");
+        const likeCountSpan = card.querySelector(".like-count");
+
+        likeBtn.addEventListener("click",(e) =>{
+            e.stopPropagation();
+
+            if(!liked){
+                liked = true;
+                likeCount++;
+                likeBtn.classList.remove("fa-regular");
+                likeBtn.classList.add("fa-solid");
+            }
+            else{
+                liked = false;
+                likeCount--;
+                likeBtn.classList.remove("fa-solid");
+                likeBtn.classList.add("fa-regular");
+            }
+            likeCountSpan.textContent = likeCount;
+        })
 
         card.addEventListener("click",() => openModal(playlist));
         cardContainer.appendChild(card);
