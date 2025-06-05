@@ -18,7 +18,7 @@ parse and write to array and rendercards
 delete splices array
 */
 let playlists = [];
-
+let playlistsOriginal = [];
 const cardContainer = document.getElementById("playlist-cards");
 
 const detailModal = document.getElementById("playlistModal");
@@ -42,6 +42,7 @@ fetch("data/data.json")
         like_count: p.like_count,
         songs: p.songs.slice(),
     }));
+    playlistsOriginal = playlists;
     renderCards();
 })
 .catch((err) => {
@@ -145,7 +146,7 @@ detailCloseBtn.onclick = () => {
     detailModal.style.display = "none";
 };
 window.addEventListener("click", (e) => {
-       if(e.target === detailModal) detailModal.style.display = "none";
+    if(e.target === detailModal) detailModal.style.display = "none";
 });
 
 function shuffleArray(arr){
@@ -280,3 +281,29 @@ function editPlaylistPrompt(index) {
 
 }
 
+//search - have a form that takes in an input then call
+
+document.getElementById('search-form').addEventListener("submit", handleSearch);
+
+function handleSearch(event){
+    event.preventDefault();
+    let searchValue = document.getElementById("search-title").value.toLowerCase();
+    let playlistsNames = playlists.filter(item => item.playlist_name.toLowerCase().includes(searchValue));
+    playlists = playlists.filter(item=> item.playlist_author.toLowerCase().includes(searchValue));
+    playlists = playlists.concat(playlistsNames);
+    renderCards();
+    
+}
+
+document.getElementById("clear-search").addEventListener("click",resetCards);
+
+function resetCards(){
+    document.getElementById("search-form").reset();
+    event.preventDefault();
+    playlists = playlistsOriginal;
+    renderCards();
+}
+
+
+
+// have buttons that sort the array using different criteria 
