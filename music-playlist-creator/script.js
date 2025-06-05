@@ -61,11 +61,19 @@ const span = document.getElementsByClassName("close")[0];
 
 span.onclick = function() {
     modal.style.display = "none";
-}
+};
 window.onclick = function(event) {
     if (event.target == modal) {
         modal.style.display = "none";
     }
+};
+
+function shuffleArray(arr){
+    for(let i = arr.length-1; i >0;i--){
+        const j = Math.floor(Math.random()*(i+1));
+        [arr[i],arr[j]] = [arr[j],arr[i]];
+    }
+    return arr;
 }
 
 function openModal(playlist) {
@@ -73,19 +81,38 @@ function openModal(playlist) {
     document.getElementById('modalCreator').innerText = `By ${playlist.playlist_author}`;
     document.getElementById('modalImage').innerHTML = `<img src="${playlist.playlist_art}" alt="Playlist Art">`;
 
+    let currentSongs = Array.isArray(playlist.songs)
+    ? playlist.songs.slice()
+    : [];
+
     const songsContainer = document.getElementById("modalSongs");
     songsContainer.innerHTML = "";
 
-    if(Array.isArray(playlist.songs) && playlist.songs.length > 0){
-    const ul = document.createElement("ul");
-    ul.style.listStyleType = "disc";
-    ul.style.paddingLeft = "1.2rem";
+    if(currentSongs.length > 0){
+        const shuffleBtn = document.createElement("button");
+        shuffleBtn.id = "shuffle-btn";
+        shuffleBtn.innerHTML = `<i class="fa-solid fa-shuffle"></i> Shuffle`;
 
-    playlist.songs.forEach(songObj => {
-        const li = document.createElement("li");
-        li.innerText = `${songObj.title} - ${songObj.artist} (${songObj.duration})`;
-        ul.appendChild(li);
-    });
+        const ul = document.createElement("ul");
+        ul.style.listStyleType = "disc";
+        ul.style.paddingLeft = "1.2rem";
+
+        function renderSongList(){
+            ul.innerHTML = "";
+            currentSongs.forEach((songObj) => {
+                const li = document.createElement("li");
+                li.innerText = `${songObj.title} - ${songObj.artist} (${songObj.duration})`;
+                ul.appendChild(li);
+            });
+        }
+        renderSongList();
+        shuffleBtn.addEventListener("click",() => {
+            shuffleArray(currentSongs);
+            renderSongList();
+        });
+
+
+    songsContainer.appendChild(shuffleBtn);
     songsContainer.appendChild(ul);
     } else{
     songsContainer.innerText = "No songs found";

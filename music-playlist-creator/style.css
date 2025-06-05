@@ -97,3 +97,20 @@ img{
     font-size: 1rem;
     color: #333;
 }
+
+#shuffle-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background-color: #007bff;
+
+}
+
+#shuffle-btn i {
+    font-size: 1.1rem;
+}
+
+#shuffle-btn:hover {
+    background-color: red;
+    transform: scale(1.15);
+}
