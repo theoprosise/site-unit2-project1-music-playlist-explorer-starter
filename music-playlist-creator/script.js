@@ -64,7 +64,7 @@ function renderCards() {
     card.className = "playlist";
 
     card.innerHTML = `
-        <img src="${playlist.playlist_art}" alt="Playlist Art">
+        <img src="${playlist.playlist_art}" id="image-card" alt="Playlist Art">
         <h3>${playlist.playlist_name}</h3>
         <p>${playlist.playlist_author}</p>
         <div class="like-container">

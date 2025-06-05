@@ -5,7 +5,7 @@
       "playlist_name": "Chill",
       "playlist_author": "PhilChill",
       "playlist_art": "assets/img/playlist.png",
-      "like_count": 100,
+      "like_count": 0,
       "songs": [
         { "title": "Ocean Eyes", "artist": "Bill E", "album": "Smile", "duration": "3:00" },
         { "title": "Midnight Sky", "artist": "Lana Breeze", "album": "Calm Nights", "duration": "2:55" },
@@ -17,7 +17,7 @@
       "playlist_name": "Workout Beats",
       "playlist_author": "FlexMax",
       "playlist_art": "assets/img/playlist.png",
-      "like_count": 250,
+      "like_count": -1,
       "songs": [
         { "title": "Pump It Up", "artist": "DJ Strong", "album": "Max Energy", "duration": "3:45" },
         { "title": "No Excuses", "artist": "BeatzMode", "album": "Hard Mode", "duration": "3:15" },
