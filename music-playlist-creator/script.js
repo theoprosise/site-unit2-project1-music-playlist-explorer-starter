@@ -82,7 +82,7 @@ function renderCards() {
         const editBtn = document.createElement("button");
         editBtn.className = "edit-btn";
         editBtn.title = "Edit Playlist";
-        editBtn.innerHTML = `<i class = "fa-solid fa-pen></i>`;
+        editBtn.innerHTML = `<i class = "fa-solid fa-pen"></i>`;
         editBtn.addEventListener("click",(e) =>{
             e.stopPropagation();
             editPlaylistPrompt(index);
@@ -91,7 +91,7 @@ function renderCards() {
         const deleteBtn = document.createElement("button");
         deleteBtn.className = "delete-btn";
         deleteBtn.title = "Delete Playlist";
-        deleteBtn.innerHTML = `<i class = "fa-solid fa-trash></i>`;
+        deleteBtn.innerHTML = `<i class = "fa-solid fa-trash"></i>`;
         deleteBtn.addEventListener("click",(e) =>{
             e.stopPropagation();
             deletePlaylist(index);
@@ -221,7 +221,7 @@ function addPlaylistPrompt() {
         return{
             title: parts[0] || "",
             artist: parts[1] || "",
-            duration: parts[3] || "",
+            duration: parts[2] || "",
         };
     })
     .filter((s) => s.title && s.artist && s.duration);
@@ -266,7 +266,7 @@ function editPlaylistPrompt(index) {
         return{
             title: parts[0] || "",
             artist: parts[1] || "",
-            duration: parts[3] || "",
+            duration: parts[2] || "",
         };
     })
     .filter((s) => s.title && s.artist && s.duration);
