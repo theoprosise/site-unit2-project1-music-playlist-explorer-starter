@@ -3,10 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <title>Music Playlist Explorer</title>
+    <title>Featured Playlist</title>
     <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
-    <script src="https://kit.fontawesome.com/da376d3db6.js" crossorigin="anonymous"></script>    
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -19,7 +17,7 @@
     </header>
 
     <main>
-        <section id="playlist-cards">
+        <section id="featured-playlist">
             <!-- JSON will populate this (hopefully)-->
         </section>
     </main>
@@ -29,18 +27,6 @@
         <!-- Your footer content here -->
     </footer>
     <!-- <script src="data/data.js"></script> -->
-    <script src="script.js" defer></script>
-    
-    <div id="playlistModal" class="modal-overlay" style="display: none;">
-        <div class="modal-content">
-            <span class="close">x</span>
-            <h2 id="modalTitle">Playlist Title</h2>
-            <p id="modalCreator">Creator Name</p>
-            <div id="modalImage"></div>
-            <div id="modalSongs">
-
-            </div>
-        </div>
-    </div>
+    <script src="featured.js" defer></script>
 </body>
 </html>
