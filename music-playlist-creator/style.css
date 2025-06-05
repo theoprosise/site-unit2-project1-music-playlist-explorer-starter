@@ -5,10 +5,19 @@ body {
     background-color: #f8f8f8;
 }
 
+#banner{
+    text-align: center;
+    background: grey;
+}
+
 #playlist-cards{
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
+    justify-content: center;
+}
+
+#featured-playlist{
     justify-content: center;
 }
 

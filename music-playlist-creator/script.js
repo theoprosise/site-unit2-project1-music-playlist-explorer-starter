@@ -324,12 +324,12 @@ function sortPlaylists(event) {
     playlists.sort((a, b) => a.playlist_name.localeCompare(b.playlist_name));
   } else if (sortValue == "numberOfLikes") {
     playlists.sort(
-      (a, b) => parseInt(a.like_count, 10) - parseInt(b.like_count, 10)
+      (a, b) => parseInt(b.like_count, 10) - parseInt(a.like_count, 10)
     );
   } else {
     //sort by ID
     console.log("idSort");
-    playlists.sort((a, b) => a.playlistId.localeCompare(b.playlistId));
+    playlists.sort((a, b) => parseInt(a.playlistId,10) - parseInt(b.playlistId),10);
   }
   renderCards();
 }

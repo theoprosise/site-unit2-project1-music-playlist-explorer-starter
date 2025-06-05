@@ -8,7 +8,8 @@
       "like_count": 100,
       "songs": [
         { "title": "Ocean Eyes", "artist": "Bill E", "album": "Smile", "duration": "3:00" },
-        { "title": "Midnight Sky", "artist": "Lana Breeze", "album": "Calm Nights", "duration": "2:55" }
+        { "title": "Midnight Sky", "artist": "Lana Breeze", "album": "Calm Nights", "duration": "2:55" },
+        { "title": "Cool Breeze", "artist": "Nina Sol", "album": "Evening Glow", "duration": "3:10" }
       ]
     },
     {
@@ -19,7 +20,9 @@
       "like_count": 250,
       "songs": [
         { "title": "Pump It Up", "artist": "DJ Strong", "album": "Max Energy", "duration": "3:45" },
-        { "title": "No Excuses", "artist": "BeatzMode", "album": "Hard Mode", "duration": "3:15" }
+        { "title": "No Excuses", "artist": "BeatzMode", "album": "Hard Mode", "duration": "3:15" },
+        { "title": "Adrenaline", "artist": "CrushCore", "album": "Sweat Storm", "duration": "3:50" },
+        { "title": "Beast Mode", "artist": "Iron Vibe", "album": "Gym Fuel", "duration": "4:05" }
       ]
     },
     {
@@ -30,7 +33,10 @@
       "like_count": 180,
       "songs": [
         { "title": "Neon Roads", "artist": "Cruze", "album": "Nightcall", "duration": "4:00" },
-        { "title": "Highway Dreams", "artist": "MoonRide", "album": "City Flow", "duration": "3:30" }
+        { "title": "Highway Dreams", "artist": "MoonRide", "album": "City Flow", "duration": "3:30" },
+        { "title": "Blurred Lights", "artist": "SkyDash", "album": "Drive Deep", "duration": "3:45" },
+        { "title": "Rearview Echoes", "artist": "Nightshade", "album": "Shadow Drift", "duration": "4:10" },
+        { "title": "Late Cruise", "artist": "Echo Miles", "album": "Speedway Silence", "duration": "4:00" }
       ]
     },
     {
@@ -41,7 +47,11 @@
       "like_count": 320,
       "songs": [
         { "title": "Notebook Vibes", "artist": "LofiBot", "album": "Study Flow", "duration": "2:45" },
-        { "title": "Bean Break", "artist": "CafeChill", "album": "Brew Beats", "duration": "3:10" }
+        { "title": "Bean Break", "artist": "CafeChill", "album": "Brew Beats", "duration": "3:10" },
+        { "title": "Page Turner", "artist": "LoFreq", "album": "Chapters", "duration": "3:20" },
+        { "title": "Quiet Focus", "artist": "MindMeld", "album": "Sharp Thoughts", "duration": "2:55" },
+        { "title": "Steady Drip", "artist": "LunaMatic", "album": "Steam Notes", "duration": "3:00" },
+        { "title": "Espresso Dreams", "artist": "CafeLush", "album": "Bitter Sweet", "duration": "2:50" }
       ]
     },
     {
@@ -52,7 +62,12 @@
       "like_count": 410,
       "songs": [
         { "title": "Disco Time", "artist": "The Glitters", "album": "Retro Love", "duration": "3:20" },
-        { "title": "Back Again", "artist": "SynthPop", "album": "Golden Days", "duration": "3:55" }
+        { "title": "Back Again", "artist": "SynthPop", "album": "Golden Days", "duration": "3:55" },
+        { "title": "Flashback Groove", "artist": "TimeSpin", "album": "Old School", "duration": "3:30" },
+        { "title": "Funky Ride", "artist": "GrooveTrain", "album": "Retro Tracks", "duration": "3:40" },
+        { "title": "Golden Hour", "artist": "80s Echo", "album": "Memory Lane", "duration": "4:05" },
+        { "title": "Vinyl Touch", "artist": "Cassette Kings", "album": "Rewind", "duration": "3:35" },
+        { "title": "Classic Pop", "artist": "ReVibe", "album": "Mixtape Memories", "duration": "3:25" }
       ]
     },
     {
@@ -63,7 +78,13 @@
       "like_count": 290,
       "songs": [
         { "title": "Wanderlust", "artist": "River Roads", "album": "Untamed", "duration": "3:35" },
-        { "title": "Sunset Radio", "artist": "Indigo Souls", "album": "First Light", "duration": "3:05" }
+        { "title": "Sunset Radio", "artist": "Indigo Souls", "album": "First Light", "duration": "3:05" },
+        { "title": "Nature Calls", "artist": "The Hollow Trees", "album": "Field Songs", "duration": "3:15" },
+        { "title": "Soft Cities", "artist": "Nova Pulse", "album": "Urban Dreams", "duration": "3:40" },
+        { "title": "Indie Groove", "artist": "The Meadow", "album": "Green Horizon", "duration": "3:30" },
+        { "title": "Through the Pines", "artist": "Aspen Lake", "album": "Quiet Wonder", "duration": "4:00" },
+        { "title": "Open Fields", "artist": "Woven Lights", "album": "Pastoral", "duration": "3:45" },
+        { "title": "Drifted Away", "artist": "Sable Sky", "album": "Tales Untold", "duration": "3:20" }
       ]
     },
     {
@@ -74,7 +95,14 @@
       "like_count": 375,
       "songs": [
         { "title": "Next Move", "artist": "Flowmatic", "album": "Bars & Beats", "duration": "2:50" },
-        { "title": "Step Up", "artist": "K-Boom", "album": "Grind Time", "duration": "3:40" }
+        { "title": "Step Up", "artist": "K-Boom", "album": "Grind Time", "duration": "3:40" },
+        { "title": "On My Level", "artist": "GrindTheory", "album": "Street Logic", "duration": "3:25" },
+        { "title": "All Night", "artist": "WordSmith", "album": "Heatwave", "duration": "3:15" },
+        { "title": "Rhyme Storm", "artist": "BeatVandal", "album": "Verses", "duration": "3:35" },
+        { "title": "City Cypher", "artist": "The Realist", "album": "Block Talk", "duration": "3:50" },
+        { "title": "Unstoppable", "artist": "Mic King", "album": "Hustle Season", "duration": "3:45" },
+        { "title": "Rhythm Run", "artist": "LX9", "album": "No Pause", "duration": "3:30" },
+        { "title": "Heavy Bars", "artist": "Grip Line", "album": "Rough Draft", "duration": "3:10" }
       ]
     },
     {
@@ -85,7 +113,15 @@
       "like_count": 200,
       "songs": [
         { "title": "Waking Light", "artist": "Ava Rae", "album": "Soft Start", "duration": "3:25" },
-        { "title": "Home Song", "artist": "Strumline", "album": "Porch Views", "duration": "2:58" }
+        { "title": "Home Song", "artist": "Strumline", "album": "Porch Views", "duration": "2:58" },
+        { "title": "First Light", "artist": "MeadowSong", "album": "Early Hours", "duration": "3:00" },
+        { "title": "Sunrise Melody", "artist": "GuitarDawn", "album": "String Horizon", "duration": "3:20" },
+        { "title": "Morning Air", "artist": "BreezeTone", "album": "Open Windows", "duration": "3:15" },
+        { "title": "Warm Strings", "artist": "CozyNotes", "album": "Blanket Sky", "duration": "2:50" },
+        { "title": "Quiet Porch", "artist": "Rustic Lane", "album": "Timber Tones", "duration": "3:05" },
+        { "title": "Cup of Peace", "artist": "EarlyBird", "album": "Still Sounds", "duration": "2:55" },
+        { "title": "Soft Landing", "artist": "StrumNova", "album": "Feather Touch", "duration": "3:10" },
+        { "title": "Golden Glow", "artist": "Acoustar", "album": "Sunbeam Strings", "duration": "3:00" }
       ]
     }
   ]
