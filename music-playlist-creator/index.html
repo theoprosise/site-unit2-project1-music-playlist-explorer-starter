@@ -25,11 +25,20 @@
             </button>
         </div>
         <form id="search-form">
-                <label for="playlist-title-search">Search by Title or Author:</label>
+                <label for="search-title">Search by Title or Author:</label>
                 <input type="text" id="search-title" name="search-title" required>
                 <button type="submit">Search</button>
                 <button id="clear-search">Clear</button>
         </form>
+        <form id="sort-options">
+                <label for="sort-value">Sort By:</label>
+                <select id="sort-value" name="sortValue">
+                    <option value="nameAlphabetically">Playlist Name (A-Z)</option>
+                    <option value="numberOfLikes">Number of Likes</option>
+                    <option value="dateAdded">Date Added (Recent First)</option>
+                </select>
+                <button type="submit">Sort Playlists</button>
+            </form>
 
         
         <section id="playlist-cards">
