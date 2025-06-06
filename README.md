@@ -6,7 +6,7 @@ Submitted by: **Theo Prosise**
 
 Estimated time spent: **7** hours spent in total
 
-Deployed Application (**required**): [Music Playlist Explorer Deployed Site](ADD_LINK_HERE)
+Deployed Application (**required**): [Music Playlist Explorer Deployed Site](https://site-unit2-project1-music-playlist-ivzc.onrender.com/)
 
 ### Application Features
 
@@ -132,7 +132,6 @@ Deployed Application (**required**): [Music Playlist Explorer Deployed Site](ADD
 
 ### Walkthrough Video
 
-`TODO://` Add the embedded URL code to your animated app walkthrough below, `ADD_EMBEDDED_CODE_HERE`. Make sure the video actually renders and is playable when viewing this README. Ensure your walkthrough showcases the presence and/or functionality of all features you implemented above (check them off as you film!). Pay attention to any **VIDEO WALKTHROUGH SPECIAL INSTRUCTIONS** checkboxes listed above to ensure graders see the full functionality of your website! (🚫 Remove this paragraph after adding walkthrough video)
 
 <div>
     <a href="https://www.loom.com/share/a6445316113443b4b008b44726c384db">
@@ -164,4 +163,4 @@ https://fontawesome.com/
 
 ### Shout out
 
-Shout out Matthew for being the best tech fellow and answering all of my questions. Also shoutout Joel for helping me progress through the labs.
+Shout out Matthew for being the best tech fellow and answering all of my questions. Also shoutout Joel for helping me progress through the labs and the project.

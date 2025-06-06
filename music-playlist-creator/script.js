@@ -1,4 +1,5 @@
 /*
+LEAVING THIS COMMENT HERE FROM MY ORIGINAL PLANNING OF THIS PROJECT - this was my original plan to implement - show my thinking
 load page fetches json and puts into array
 renderCards populates array onto site
 each card has a like an edit - calls editplaylistprompt delete - calls deleteplaylist any other click opens modal
@@ -17,16 +18,19 @@ parse and write to array and rendercards
 
 delete splices array
 */
-let playlists = [];
-let playlistsOriginal = [];
-const cardContainer = document.getElementById("playlist-cards");
 
+//Playlists array to store json data
+let playlists = [];
+//Store original to repopulate playlists from beginning state on reset
+let playlistsOriginal = [];
+
+//Elements that will be used later on
+const cardContainer = document.getElementById("playlist-cards");
 const detailModal = document.getElementById("playlistModal");
 const detailCloseBtn = document.getElementsByClassName("close")[0];
-
 const addPlaylistBtn = document.getElementById("add-playlist-btn");
 
-//json to array and render
+//Get json to array and render the playlists
 fetch("data/data.json")
   .then((res) => res.json())
   .then((data) => {
@@ -34,6 +38,7 @@ fetch("data/data.json")
       cardContainer.innerHTML = "<p>No Playlists Added</p>";
       return;
     }
+    //Populate playlists array with data from json objects for each playlist
     playlists = data.playlists.map((p) => ({
       playlistId: p.playlistID,
       playlist_name: p.playlist_name,
@@ -49,8 +54,8 @@ fetch("data/data.json")
     console.error("Fetch Error:", err);
   });
 
-//renderCards
-
+//render playlists to html - this will be used often
+//Define the framework and data of a playlist card
 function renderCards() {
   cardContainer.innerHTML = "";
 
@@ -62,7 +67,8 @@ function renderCards() {
   playlists.forEach((playlist, index) => {
     const card = document.createElement("article");
     card.className = "playlist";
-
+    //Meat of playlist card - populate with data from array and add to html
+    //innerHTML not safe but acceptable when reading from trusted data source?
     card.innerHTML = `
         <img src="${playlist.playlist_art}" id="image-card" alt="Playlist Art">
         <h3>${playlist.playlist_name}</h3>
@@ -78,6 +84,7 @@ function renderCards() {
     const actionsDiv = document.createElement("div");
     actionsDiv.className = "card-actions";
 
+    //Playlist edit button framework - styling and event listener
     const editBtn = document.createElement("button");
     editBtn.className = "edit-btn";
     editBtn.title = "Edit Playlist";
@@ -87,6 +94,7 @@ function renderCards() {
       editPlaylistPrompt(index);
     });
 
+    //Playlist delete button framework - styling and event listener
     const deleteBtn = document.createElement("button");
     deleteBtn.className = "delete-btn";
     deleteBtn.title = "Delete Playlist";
@@ -96,25 +104,33 @@ function renderCards() {
       deletePlaylist(index);
     });
 
+    //Add buttons to card through actionsDiv
     actionsDiv.appendChild(editBtn);
     actionsDiv.appendChild(deleteBtn);
     card.appendChild(actionsDiv);
 
+    //State variables for like counter
     let liked = false;
     let likeCount = playlist.like_count;
 
+    //Like button elements
     const likeBtnIcon = card.querySelector(".like-btn i");
     const likeCountSpan = card.querySelector(".like-count");
 
+    //Logic to determine response to a like or unlike of playlist
+    //Solid Font awesome heart represents a liked and regular represents a lack of like
     likeBtnIcon.addEventListener("click", (e) => {
+      //Stop propogation of opening modal when like button clicked
       e.stopPropagation();
-
+      //Logic if not liked already
       if (!liked) {
         liked = true;
         likeCount++;
         likeBtnIcon.classList.remove("fa-regular");
         likeBtnIcon.classList.add("fa-solid");
-      } else {
+      }
+      //Logic if already liked
+      else {
         liked = false;
         likeCount--;
         likeBtnIcon.classList.remove("fa-solid");
@@ -124,21 +140,21 @@ function renderCards() {
       likeCountSpan.textContent = likeCount;
     });
 
+    //Open the card modal on a click to the card that is not a definedbutton
     card.addEventListener("click", () => openDetailModal(playlist));
     cardContainer.appendChild(card);
   });
 }
 
-//delete playlist
+//Delete a playlist
 function deletePlaylist(index) {
   playlists.splice(index, 1);
   renderCards();
 }
 
 //Modal logic section
-//detailCloseBtn
-//detailModal
 
+//Stop displaying the modal when it is closed - either on x button or elsewhere on screen
 detailCloseBtn.onclick = () => {
   detailModal.style.display = "none";
 };
@@ -146,6 +162,8 @@ window.addEventListener("click", (e) => {
   if (e.target === detailModal) detailModal.style.display = "none";
 });
 
+//Shuffle function to be used when array is shuffled
+//Fisher-Yates shuffle algorithm - O(n) efficiency and O(1) space
 function shuffleArray(arr) {
   for (let i = arr.length - 1; i > 0; i--) {
     const j = Math.floor(Math.random() * (i + 1));
@@ -154,6 +172,7 @@ function shuffleArray(arr) {
   return arr;
 }
 
+//Function to open a modal upon a card being clicked
 function openDetailModal(playlist) {
   document.getElementById("modalTitle").innerText = playlist.playlist_name;
   document.getElementById(
@@ -163,6 +182,9 @@ function openDetailModal(playlist) {
     "modalImage"
   ).innerHTML = `<img src="${playlist.playlist_art}" alt="Playlist Art">`;
 
+  //Ternary operator to check if songs exist and then populate a shallow copy if not
+  //Useful to shuffle songs in place and then keep original ordering
+  //If playlist.songs is an array then it will slice it and assign to currentSongs - if not then empty array to current
   let currentSongs = Array.isArray(playlist.songs)
     ? playlist.songs.slice()
     : [];
@@ -170,15 +192,18 @@ function openDetailModal(playlist) {
   const songsContainer = document.getElementById("modalSongs");
   songsContainer.innerHTML = "";
 
+  //Logic to shuffle songs
   if (currentSongs.length > 0) {
     const shuffleBtn = document.createElement("button");
     shuffleBtn.id = "shuffle-btn";
     shuffleBtn.innerHTML = `<i class="fa-solid fa-shuffle"></i> Shuffle`;
 
+    //Unordered list to hold the songs
     const ul = document.createElement("ul");
     ul.style.listStyleType = "disc";
     ul.style.paddingLeft = "1.2rem";
 
+    //Function to render the songs - renders the currentSongs copy of original ordering
     function renderSongList() {
       ul.innerHTML = "";
       currentSongs.forEach((songObj) => {
@@ -188,11 +213,13 @@ function openDetailModal(playlist) {
       });
     }
     renderSongList();
+    //Logic for shuffle button
     shuffleBtn.addEventListener("click", () => {
       shuffleArray(currentSongs);
       renderSongList();
     });
 
+    //Add shuffle button and songs to the songsContainer
     songsContainer.appendChild(shuffleBtn);
     songsContainer.appendChild(ul);
   } else {
@@ -201,9 +228,10 @@ function openDetailModal(playlist) {
   detailModal.style.display = "block";
 }
 
-//Add playlist
+//Add playlist handler
 addPlaylistBtn.addEventListener("click", addPlaylistPrompt);
 
+//Prompt user for playlist information
 function addPlaylistPrompt() {
   const name = prompt("Enter playlist name:");
   const author = prompt("Enter author name:");
@@ -213,6 +241,8 @@ function addPlaylistPrompt() {
     'Enter songs (comma-separated). Format "Title|Author|1:00, Title2|Author2|2:00"'
   );
 
+  //Logic to parse the songs input from user - janky but hits rubric
+  //Essentially asking for song objects whose parts are delimited by pipes and objects are csv
   const songsArray = songsRaw
     .split(",")
     .map((s) => s.trim())
@@ -227,8 +257,7 @@ function addPlaylistPrompt() {
     })
     .filter((s) => s.title && s.artist && s.duration);
 
-  //check for edge cases eventually
-
+  //Create new playlist and add to playlists array and sanitize input
   const newId = 1;
   playlists.push({
     playlistId: newId,
@@ -242,7 +271,12 @@ function addPlaylistPrompt() {
   renderCards();
 }
 
+//Same logic as adding a playlist but we are editing one that already exits
+//Takes the index of that playlist as input
+//Possible fix would be combining these two functions? Maybe have a boolean input to check
+// if we want an add or an edit and go from there?
 function editPlaylistPrompt(index) {
+  //Grab playlist object and fill prompts with its current data
   const pl = playlists[index];
 
   const newName = prompt("Enter playlist name:", pl.playlist_name);
@@ -260,7 +294,7 @@ function editPlaylistPrompt(index) {
     'Enter songs (comma-separated). Format "Title|Author|1:00, Title2|Author2|2:00"',
     existingSongs
   );
-
+  //Same logic as add
   const songsArray = songsRaw
     .split(",")
     .map((s) => s.trim())
@@ -274,7 +308,7 @@ function editPlaylistPrompt(index) {
       };
     })
     .filter((s) => s.title && s.artist && s.duration);
-
+  //Sanitize input slightly
   pl.playlist_name = newName.trim();
   pl.playlist_author = newAuthor.trim();
   pl.playlist_art = newArt.trim();
@@ -282,20 +316,22 @@ function editPlaylistPrompt(index) {
   renderCards();
 }
 
-//search - have a form that takes in an input then call
-
 document.getElementById("search-form").addEventListener("submit", handleSearch);
 
-//function to parse search value and render playlists that match query
+//Search function based on user input to form
 function handleSearch(event) {
+  //Stop html from freaking out with preventDefault
   event.preventDefault();
+  //Handle upper or lowercase searches
   let searchValue = document.getElementById("search-title").value.toLowerCase();
+  //Use both search for artist of playlist or title of playlist as required by project guidelines
   let playlistsNames = playlists.filter((item) =>
     item.playlist_name.toLowerCase().includes(searchValue)
   );
   playlists = playlists.filter((item) =>
     item.playlist_author.toLowerCase().includes(searchValue)
   );
+  //Put artist results and title results on display
   playlists = playlists.concat(playlistsNames);
   renderCards();
 }
@@ -310,26 +346,30 @@ function resetCards() {
   renderCards();
 }
 
-// have buttons that sort the array using different criteria
-//date is weird - use ID as a stand in?
-
+//Buttons that sort the array using different criteria (sort-options)
 document
   .getElementById("sort-options")
   .addEventListener("submit", sortPlaylists);
 
+//Function to sort - we will reorder playlists array based on user choice
 function sortPlaylists(event) {
   event.preventDefault();
   const sortValue = document.getElementById("sort-value").value;
+  //Sort by title alphabetically
   if (sortValue == "nameAlphabetically") {
     playlists.sort((a, b) => a.playlist_name.localeCompare(b.playlist_name));
+    //Sort by number of likes - non-increasing order
   } else if (sortValue == "numberOfLikes") {
     playlists.sort(
       (a, b) => parseInt(b.like_count, 10) - parseInt(a.like_count, 10)
     );
   } else {
-    //sort by ID
+    //sort by ID (Date stand in)
     console.log("idSort");
-    playlists.sort((a, b) => parseInt(a.playlistId,10) - parseInt(b.playlistId),10);
+    playlists.sort(
+      (a, b) => parseInt(a.playlistId, 10) - parseInt(b.playlistId),
+      10
+    );
   }
   renderCards();
 }

@@ -5,11 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <title>Music Playlist Explorer</title>
+    <!--Link to stylesheets - use Font Awesome for icons-->
     <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
     <script src="https://kit.fontawesome.com/da376d3db6.js" crossorigin="anonymous"></script>    
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <!-- Header with navigation bar to and from features page-->
     <header id="banner">
         <h1>Music Playlist Explorer</h1>
         <nav class="main-nav">
@@ -19,17 +21,20 @@
     </header>
 
     <main>
+        <!-- Section to add a new playlist through JS prompts-->
         <div class="add-playlist-container">
             <button id="add-playlist-btn">
                 <i class="fa-solid fa-plus"></i> Add Playlist
             </button>
         </div>
+        <!-- Search form to find specific playlist-->
         <form id="search-form">
                 <label for="search-title">Search by Title or Author:</label>
                 <input type="text" id="search-title" name="search-title" required>
                 <button type="submit">Search</button>
                 <button id="clear-search">Clear</button>
         </form>
+        <!-- Form to determine which sort to use-->
         <form id="sort-options">
                 <label for="sort-value">Sort By:</label>
                 <select id="sort-value" name="sortValue">
@@ -42,7 +47,7 @@
 
         
         <section id="playlist-cards">
-            <!-- JSON will populate this (hopefully)-->
+            <!-- JSON will populate this-->
         </section>
     </main>
 
@@ -53,6 +58,7 @@
     <!-- <script src="data/data.js"></script> -->
     <script src="script.js" defer></script>
     
+    <!--Playlist modal that is intially hidden but opens on click-->
     <div id="playlistModal" class="modal-overlay" style="display: none;">
         <div class="modal-content">
             <span class="close">x</span>
