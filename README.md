@@ -129,10 +129,6 @@ Deployed Application (**required**): [Music Playlist Explorer Deployed Site](htt
   - [x] Selecting a sort option should result in a reordering based on the selected sort while maintaining a grid view.
 
 ### Walkthrough Video
-
-
-<div style="position: relative; padding-bottom: 66.74907292954263%; height: 0;"><iframe src="https://www.loom.com/embed/a6445316113443b4b008b44726c384db?sid=568f15e2-a1b4-4d0e-92b6-b89c54a8fc3b" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>
-
 <div>
     <a href="https://www.loom.com/share/a6445316113443b4b008b44726c384db">
       <p>Music Playlist Theo P - Watch Video</p>
