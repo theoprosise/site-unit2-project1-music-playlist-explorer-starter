@@ -4,7 +4,7 @@
 
 Submitted by: **Theo Prosise**
 
-Estimated time spent: **6** hours spent in total
+Estimated time spent: **7** hours spent in total
 
 Deployed Application (**required**): [Music Playlist Explorer Deployed Site](ADD_LINK_HERE)
 
@@ -134,21 +134,25 @@ Deployed Application (**required**): [Music Playlist Explorer Deployed Site](ADD
 
 `TODO://` Add the embedded URL code to your animated app walkthrough below, `ADD_EMBEDDED_CODE_HERE`. Make sure the video actually renders and is playable when viewing this README. Ensure your walkthrough showcases the presence and/or functionality of all features you implemented above (check them off as you film!). Pay attention to any **VIDEO WALKTHROUGH SPECIAL INSTRUCTIONS** checkboxes listed above to ensure graders see the full functionality of your website! (🚫 Remove this paragraph after adding walkthrough video)
 
-<div style="position: relative; padding-bottom: 66.74907292954263%; height: 0;"><iframe src="https://www.loom.com/embed/a6445316113443b4b008b44726c384db?sid=2f35ce6b-8f32-40c1-a411-a8e7d54eec88" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>
-
-`<div style="position: relative; padding-bottom: 66.74907292954263%; height: 0;"><iframe src="https://www.loom.com/embed/a6445316113443b4b008b44726c384db?sid=1836fbe5-8439-47b4-b761-116a2e07900d" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>`
-
+<div>
+    <a href="https://www.loom.com/share/a6445316113443b4b008b44726c384db">
+      <p>Music Playlist Theo P - Watch Video</p>
+    </a>
+    <a href="https://www.loom.com/share/a6445316113443b4b008b44726c384db">
+      <img style="max-width:300px;" src="https://cdn.loom.com/sessions/thumbnails/a6445316113443b4b008b44726c384db-a03d183b8f5f4757-full-play.gif">
+    </a>
+  </div>
 
 
 ### Reflection
 
 * Did the topics discussed in your labs prepare you to complete the assignment? Be specific, which features in your weekly assignment did you feel unprepared to complete?
 
-The topics in labs prepared me well to complete this assignment. I believe that the review feature in Lab 4 taught me to link HTML to JS and how dynamic user interactions should populate in websites.
+The topics in labs prepared me well to complete this assignment. I believe that the review feature in Lab 4 really helped to solidify how dynamic user interactions should populate in websites.
 
 * If you had more time, what would you have done differently? Would you have added additional features? Changed the way your project responded to a particular event, etc.
   
-If I had more time I would have made a more accessible user experience and perhaps added a feature that linked this explorer to the Spotify API to grab real songs and real playlist data. Furthermore, I would have made the process of adding and editing songs more smooth. As it stands, my project hits all features in the rubric.
+If I had more time I would have made a more accessible user experience and perhaps added a feature that linked this explorer to the Spotify API to grab real songs and real playlist data. Furthermore, I would have made the process of adding and editing songs more efficient. As it stands, my project hits all features in the rubric.
 
 * Reflect on your project demo, what went well? Were there things that maybe didn't go as planned? Did you notice something that your peer did that you would like to try next time?
 
