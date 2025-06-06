@@ -151,7 +151,7 @@ If I had more time I would have made a more accessible user experience and perha
 
 * Reflect on your project demo, what went well? Were there things that maybe didn't go as planned? Did you notice something that your peer did that you would like to try next time?
 
-Add your response here
+I enjoyed demoing my project, and I think that my slideshow and code example were well received by my peers. I noticed the methods my peers used to add playlist and input/edit new songs were very intuitive and I think those methods would add a lot to my own project. 
 
 ### Open-source libraries used
 
