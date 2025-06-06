@@ -134,7 +134,11 @@ Deployed Application (**required**): [Music Playlist Explorer Deployed Site](ADD
 
 `TODO://` Add the embedded URL code to your animated app walkthrough below, `ADD_EMBEDDED_CODE_HERE`. Make sure the video actually renders and is playable when viewing this README. Ensure your walkthrough showcases the presence and/or functionality of all features you implemented above (check them off as you film!). Pay attention to any **VIDEO WALKTHROUGH SPECIAL INSTRUCTIONS** checkboxes listed above to ensure graders see the full functionality of your website! (🚫 Remove this paragraph after adding walkthrough video)
 
-`ADD_EMBEDDED_CODE_HERE`
+<div style="position: relative; padding-bottom: 66.74907292954263%; height: 0;"><iframe src="https://www.loom.com/embed/a6445316113443b4b008b44726c384db?sid=2f35ce6b-8f32-40c1-a411-a8e7d54eec88" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>
+
+`<div style="position: relative; padding-bottom: 66.74907292954263%; height: 0;"><iframe src="https://www.loom.com/embed/a6445316113443b4b008b44726c384db?sid=1836fbe5-8439-47b4-b761-116a2e07900d" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>`
+
+
 
 ### Reflection
 
@@ -156,4 +160,4 @@ https://fontawesome.com/
 
 ### Shout out
 
-Give a shout out to somebody from your cohort that especially helped you during your project. This can be a fellow peer, instructor, TA, mentor, etc.
+Shout out Matthew for being the best tech fellow and answering all of my questions. Also shoutout Joel for helping me progress through the labs.
