@@ -17,7 +17,7 @@
       "playlist_name": "Workout Beats",
       "playlist_author": "FlexMax",
       "playlist_art": "assets/img/playlist.png",
-      "like_count": -1,
+      "like_count": 1,
       "songs": [
         { "title": "Pump It Up", "artist": "DJ Strong", "album": "Max Energy", "duration": "3:45" },
         { "title": "No Excuses", "artist": "BeatzMode", "album": "Hard Mode", "duration": "3:15" },
